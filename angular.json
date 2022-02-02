@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "github-search-ddd": "apps/github-search-ddd",
+    "github-search-ddd-e2e": "apps/github-search-ddd-e2e"
+  }
+}
