@@ -12,7 +12,7 @@ interface IEntityListResponse<T> {
 @Injectable({
   providedIn: 'root',
 })
-export class EntityListDataService<T, M> {
+export class EntityListDataService<T, M = void> {
   private readonly _entityListType: EntityListType;
 
   constructor(
@@ -36,7 +36,7 @@ export class EntityListDataService<T, M> {
     );
   }
 
-  public getUserById(userId: string): Observable<M> {
+  public getEntityById(userId: string): Observable<M> {
     return this._http.get<M>(
       this.BASE_URL + `/${this._entityListType}/${userId}`
     );

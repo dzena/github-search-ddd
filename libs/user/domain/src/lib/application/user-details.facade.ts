@@ -25,7 +25,7 @@ export class UserDetailsFacade {
   // if we don't want to, no need to use the state service
   public getUserById(userId: string): Observable<IUserDetailView[]> {
     return this._userDataService
-      .getUserById(userId)
+      .getEntityById(userId)
       .pipe(map(mapToDetailsItem));
   }
 }

@@ -3,7 +3,7 @@ import { EntityListState } from '../+state/entity-list.state';
 import { EntityListDataService } from '../infrastructure/entity-list.data.service';
 import { catchError, EMPTY, filter, Observable, switchMap } from 'rxjs';
 
-export class EntityListFacade<T, D> {
+export class EntityListFacade<T, D = void> {
   protected entities$: Observable<T[]> = this._entityState.entities$;
 
   constructor(

@@ -21,8 +21,8 @@ export class UserListFacade extends EntityListFacade<IUserListEntity, IUser> {
 
   constructor(
     protected override _route: ActivatedRoute,
-    protected _userState: UserStateService,
-    protected _userDataService: UserDataService
+    private _userState: UserStateService,
+    private _userDataService: UserDataService
   ) {
     super(_route, _userState, _userDataService);
   }
