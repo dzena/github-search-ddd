@@ -1,0 +1,15 @@
+<form
+  (ngSubmit)="submitted.emit(searchForm.value.q)"
+  #searchForm="ngForm"
+  fxLayoutAlign="center center"
+  fxLayoutGap="5px"
+  class="search-form"
+>
+  <mat-form-field appearance="outline" class="search-input">
+    <mat-label>Search</mat-label>
+    <input matInput type="text" name="q" ngModel [value]="value" />
+    <mat-icon *ngIf="showSearchIcon" matPrefix>search</mat-icon>
+  </mat-form-field>
+
+  <ng-content select="[search-form-button]"></ng-content>
+</form>

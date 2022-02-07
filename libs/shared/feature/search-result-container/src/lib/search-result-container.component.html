@@ -1,0 +1,35 @@
+<github-search-ddd-toolbar></github-search-ddd-toolbar>
+<mat-sidenav-container class="search-res-sidenav-container">
+  <mat-sidenav mode="side" opened class="search-res-sidenav">
+    <github-search-ddd-search-form
+      (submitted)="search($event)"
+    ></github-search-ddd-search-form>
+    <mat-nav-list>
+      <a
+        mat-list-item
+        [routerLink]="'/search/users'"
+        [queryParams]="{
+          q: route.snapshot.queryParams['q'],
+          page: '1',
+          per_page: route.snapshot.queryParams['per_page']
+        }"
+        routerLinkActive="active-menu-item"
+        >Users</a
+      >
+      <a
+        mat-list-item
+        [routerLink]="'/search/repositories'"
+        [queryParams]="{
+          q: route.snapshot.queryParams['q'],
+          page: '1',
+          per_page: route.snapshot.queryParams['per_page']
+        }"
+        routerLinkActive="active-menu-item"
+        >Repositories</a
+      >
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

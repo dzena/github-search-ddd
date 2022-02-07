@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/ui-kit/loading-progress",
+  "sourceRoot": "libs/ui-kit/loading-progress/src",
+  "prefix": "github-search-ddd",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/ui-kit/loading-progress"],
+      "options": {
+        "project": "libs/ui-kit/loading-progress/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/ui-kit/loading-progress/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/ui-kit/loading-progress/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ui-kit/loading-progress"],
+      "options": {
+        "jestConfig": "libs/ui-kit/loading-progress/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/ui-kit/loading-progress/src/**/*.ts",
+          "libs/ui-kit/loading-progress/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

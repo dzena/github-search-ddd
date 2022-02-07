@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/http-interceptors",
+  "sourceRoot": "libs/shared/http-interceptors/src",
+  "prefix": "github-search-ddd",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/shared/http-interceptors"],
+      "options": {
+        "project": "libs/shared/http-interceptors/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/http-interceptors/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/http-interceptors/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/http-interceptors"],
+      "options": {
+        "jestConfig": "libs/shared/http-interceptors/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/http-interceptors/src/**/*.ts",
+          "libs/shared/http-interceptors/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -14,7 +14,52 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@github-search-ddd/material": ["libs/material/src/index.ts"],
+      "@github-search-ddd/repository/domain": [
+        "libs/repository/domain/src/index.ts"
+      ],
+      "@github-search-ddd/repository/feature/repository-list": [
+        "libs/repository/feature/repository-list/src/index.ts"
+      ],
+      "@github-search-ddd/repository/utils/directives": [
+        "libs/repository/utils/directives/src/index.ts"
+      ],
+      "@github-search-ddd/search/domain": ["libs/search/domain/src/index.ts"],
+      "@github-search-ddd/search/feature/search": [
+        "libs/search/feature/search/src/index.ts"
+      ],
+      "@github-search-ddd/shared/directives": [
+        "libs/shared/directives/src/index.ts"
+      ],
+      "@github-search-ddd/shared/feature/search-result-container": [
+        "libs/shared/feature/search-result-container/src/index.ts"
+      ],
+      "@github-search-ddd/shared/http-interceptors": [
+        "libs/shared/http-interceptors/src/index.ts"
+      ],
+      "@github-search-ddd/shared/utils/base-state": [
+        "libs/shared/utils/base-state/src/index.ts"
+      ],
+      "@github-search-ddd/ui-kit/list": ["libs/ui-kit/list/src/index.ts"],
+      "@github-search-ddd/ui-kit/list-filter": [
+        "libs/ui-kit/list-filter/src/index.ts"
+      ],
+      "@github-search-ddd/ui-kit/loading-progress": [
+        "libs/ui-kit/loading-progress/src/index.ts"
+      ],
+      "@github-search-ddd/ui-kit/search-form": [
+        "libs/ui-kit/search-form/src/index.ts"
+      ],
+      "@github-search-ddd/ui-kit/toolbar": ["libs/ui-kit/toolbar/src/index.ts"],
+      "@github-search-ddd/user/domain": ["libs/user/domain/src/index.ts"],
+      "@github-search-ddd/user/feature/user-details": [
+        "libs/user/feature/user-details/src/index.ts"
+      ],
+      "@github-search-ddd/user/feature/user-list": [
+        "libs/user/feature/user-list/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

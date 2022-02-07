@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/directives",
+  "sourceRoot": "libs/shared/directives/src",
+  "prefix": "github-search-ddd",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/shared/directives"],
+      "options": {
+        "project": "libs/shared/directives/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/directives/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/directives/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/directives"],
+      "options": {
+        "jestConfig": "libs/shared/directives/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/directives/src/**/*.ts",
+          "libs/shared/directives/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

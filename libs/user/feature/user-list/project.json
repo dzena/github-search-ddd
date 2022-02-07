@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/user/feature/user-list",
+  "sourceRoot": "libs/user/feature/user-list/src",
+  "prefix": "user",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/user/feature/user-list"],
+      "options": {
+        "project": "libs/user/feature/user-list/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/user/feature/user-list/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/user/feature/user-list/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/user/feature/user-list"],
+      "options": {
+        "jestConfig": "libs/user/feature/user-list/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/user/feature/user-list/src/**/*.ts",
+          "libs/user/feature/user-list/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["domain:user", "type:feature"]
+}

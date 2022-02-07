@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/repository/feature/repository-list",
+  "sourceRoot": "libs/repository/feature/repository-list/src",
+  "prefix": "repository",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/repository/feature/repository-list"],
+      "options": {
+        "project": "libs/repository/feature/repository-list/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/repository/feature/repository-list/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/repository/feature/repository-list/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/repository/feature/repository-list"],
+      "options": {
+        "jestConfig": "libs/repository/feature/repository-list/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/repository/feature/repository-list/src/**/*.ts",
+          "libs/repository/feature/repository-list/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["domain:repository", "type:feature"]
+}

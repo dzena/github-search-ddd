@@ -1,0 +1,29 @@
+<ng-container *ngIf="repositories$ | async as repositories">
+  <github-search-ddd-list [totalCount]="repositories.totalCount">
+    <github-search-ddd-list-filter
+      [options]="filterOptions"
+      filter
+    ></github-search-ddd-list-filter>
+    <mat-list-item
+      *ngFor="let repository of repositories.list"
+      class="list-item"
+    >
+      <h3 matLine class="list-item-title">
+        <a [href]="repository.html_url" target="_blank" rel="noopener">
+          {{ repository.full_name }}
+        </a>
+      </h3>
+      <p matLine>
+        <span>{{ repository.description }}</span>
+      </p>
+      <p matLine>
+        <span
+          *ngFor="let tag of repository | repositoryTags"
+          [title]="tag.title"
+          class="list-item-tag"
+          >{{ tag.description }}</span
+        >
+      </p>
+    </mat-list-item>
+  </github-search-ddd-list>
+</ng-container>

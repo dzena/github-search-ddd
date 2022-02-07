@@ -1,0 +1,12 @@
+:host-context(.search-page-container) .search-input {
+  width: 100%;
+}
+
+.search-form {
+  .search-input {
+    // TODO -> ViewEncapsulation.None
+    ::ng-deep .mat-form-field-wrapper {
+      padding-bottom: 0;
+    }
+  }
+}

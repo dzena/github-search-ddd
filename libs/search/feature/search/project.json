@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/search/feature/search",
+  "sourceRoot": "libs/search/feature/search/src",
+  "prefix": "search",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/search/feature/search"],
+      "options": {
+        "project": "libs/search/feature/search/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/search/feature/search/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/search/feature/search/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/search/feature/search"],
+      "options": {
+        "jestConfig": "libs/search/feature/search/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/search/feature/search/src/**/*.ts",
+          "libs/search/feature/search/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["domain:search", "type:feature"]
+}

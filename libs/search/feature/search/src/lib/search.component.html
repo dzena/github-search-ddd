@@ -1,0 +1,21 @@
+<div fxLayout="column" fxFill class="search-page-container">
+  <github-search-ddd-toolbar></github-search-ddd-toolbar>
+  <div fxLayoutAlign="center center" fxFlexOffset="10">
+    <div fxFlex="40" fxLayout="column" fxLayoutGap="0">
+      <h2 fxLayoutAlign="start center">
+        <mat-icon class="search-icon">search</mat-icon>
+        Search more than 553M users
+      </h2>
+      <github-search-ddd-search-form
+        [showSearchIcon]="false"
+        (submitted)="search($event)"
+        fxFlex="100"
+        class="search-form"
+      >
+        <button mat-button search-form-button type="submit" color="primary">
+          Search
+        </button>
+      </github-search-ddd-search-form>
+    </div>
+  </div>
+</div>

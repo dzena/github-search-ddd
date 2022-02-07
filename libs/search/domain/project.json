@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/search/domain",
+  "sourceRoot": "libs/search/domain/src",
+  "prefix": "search",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/search/domain"],
+      "options": {
+        "project": "libs/search/domain/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/search/domain/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/search/domain/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/search/domain"],
+      "options": {
+        "jestConfig": "libs/search/domain/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/search/domain/src/**/*.ts",
+          "libs/search/domain/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["domain:search", "type:domain-logic"]
+}

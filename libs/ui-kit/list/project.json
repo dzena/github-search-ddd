@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/ui-kit/list",
+  "sourceRoot": "libs/ui-kit/list/src",
+  "prefix": "github-search-ddd",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/ui-kit/list"],
+      "options": {
+        "project": "libs/ui-kit/list/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/ui-kit/list/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/ui-kit/list/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ui-kit/list"],
+      "options": {
+        "jestConfig": "libs/ui-kit/list/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/ui-kit/list/src/**/*.ts",
+          "libs/ui-kit/list/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

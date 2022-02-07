@@ -1,0 +1,19 @@
+<ng-container *ngIf="users$ | async as users">
+  <github-search-ddd-list [totalCount]="users.totalCount">
+    <github-search-ddd-list-filter
+      [options]="filterOptions"
+      filter
+    ></github-search-ddd-list-filter>
+    <mat-list-item *ngFor="let user of users.list" class="list-item">
+      <img matListAvatar [src]="user.avatar_url" alt="avatar" />
+      <h3 matLine class="list-item-title">
+        <a [href]="user.html_url" target="_blank" rel="noopener">
+          {{ user.login }}
+        </a>
+      </h3>
+      <button mat-icon-button (click)="readMore(user.login)">
+        <mat-icon>read_more</mat-icon>
+      </button>
+    </mat-list-item>
+  </github-search-ddd-list>
+</ng-container>

@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/utils/base-state",
+  "sourceRoot": "libs/shared/utils/base-state/src",
+  "prefix": "github-search-ddd",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/shared/utils/base-state"],
+      "options": {
+        "project": "libs/shared/utils/base-state/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/utils/base-state/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/utils/base-state/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/utils/base-state"],
+      "options": {
+        "jestConfig": "libs/shared/utils/base-state/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/utils/base-state/src/**/*.ts",
+          "libs/shared/utils/base-state/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

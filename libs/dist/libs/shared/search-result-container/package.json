@@ -1,0 +1,16 @@
+{
+  "name": "@github-search-ddd/shared/feature/search-result-container",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^13.2.0",
+    "@angular/core": "^13.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "module": "esm2020/github-search-ddd-shared-feature-search-result-container.mjs",
+  "es2020": "esm2020/github-search-ddd-shared-feature-search-result-container.mjs",
+  "esm2020": "esm2020/github-search-ddd-shared-feature-search-result-container.mjs",
+  "typings": "github-search-ddd-shared-feature-search-result-container.d.ts",
+  "sideEffects": false
+}

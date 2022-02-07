@@ -1,0 +1,19 @@
+<div fxLayoutAlign="space-between center" class="list-heading">
+  <h2>Total results found {{ totalCount | number }}</h2>
+  <ng-content select="[filter]"></ng-content>
+</div>
+<div class="list-container">
+  <mat-list class="list">
+    <ng-content></ng-content>
+  </mat-list>
+</div>
+
+<mat-paginator
+  [length]="totalCount"
+  [pageSizeOptions]="pageSizeOptions"
+  [pageSize]="pageSizeOptions[0]"
+  githubSearchDddPaginatorQueryReflector
+  [paginator]="p"
+  #p
+  class="paginator"
+></mat-paginator>

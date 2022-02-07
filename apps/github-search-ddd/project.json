@@ -18,7 +18,10 @@
           "apps/github-search-ddd/src/favicon.ico",
           "apps/github-search-ddd/src/assets"
         ],
-        "styles": ["apps/github-search-ddd/src/styles.scss"],
+        "styles": [
+          "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+          "apps/github-search-ddd/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {

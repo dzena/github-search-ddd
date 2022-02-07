@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/repository/utils/directives",
+  "sourceRoot": "libs/repository/utils/directives/src",
+  "prefix": "directives",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/repository/utils/directives"],
+      "options": {
+        "project": "libs/repository/utils/directives/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/repository/utils/directives/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/repository/utils/directives/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/repository/utils/directives"],
+      "options": {
+        "jestConfig": "libs/repository/utils/directives/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/repository/utils/directives/src/**/*.ts",
+          "libs/repository/utils/directives/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["domain:repository", "type:util"]
+}
