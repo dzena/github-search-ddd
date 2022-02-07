@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SearchResultContainerComponent } from './search-result-container.component';
+import { EntityListContainerComponent } from './search-result-container.component';
 
 describe('SearchResultContainerComponent', () => {
-  let component: SearchResultContainerComponent;
-  let fixture: ComponentFixture<SearchResultContainerComponent>;
+  let component: EntityListContainerComponent;
+  let fixture: ComponentFixture<EntityListContainerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SearchResultContainerComponent ]
+      declarations: [ EntityListContainerComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SearchResultContainerComponent);
+    fixture = TestBed.createComponent(EntityListContainerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

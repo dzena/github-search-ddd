@@ -1,6 +1,6 @@
 module.exports = {
-  displayName: 'shared-search-result-container',
-  preset: '../../../jest.preset.js',
+  displayName: 'shared-entity-list-feature-entity-list-container',
+  preset: '../../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
@@ -8,7 +8,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../../coverage/libs/shared/search-result-container',
+  coverageDirectory: '../../../../../coverage/libs/shared/entity-list/feature/entity-list-container',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },

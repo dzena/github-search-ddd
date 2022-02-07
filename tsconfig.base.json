@@ -35,8 +35,8 @@
       "@github-search-ddd/shared/entity-list/domain": [
         "libs/shared/entity-list/domain/src/index.ts"
       ],
-      "@github-search-ddd/shared/feature/search-result-container": [
-        "libs/shared/feature/search-result-container/src/index.ts"
+      "@github-search-ddd/shared/entity-list/feature/entity-list-container": [
+        "libs/shared/entity-list/feature/entity-list-container/src/index.ts"
       ],
       "@github-search-ddd/shared/http-interceptors": [
         "libs/shared/http-interceptors/src/index.ts"

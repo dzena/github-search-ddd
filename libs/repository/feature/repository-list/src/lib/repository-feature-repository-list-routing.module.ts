@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RepositoryListComponent } from './repository-list.component';
-import { SearchResultContainerComponent } from '@github-search-ddd/shared/feature/search-result-container';
+import { EntityListContainerComponent } from '@github-search-ddd/shared/entity-list/feature/entity-list-container';
 
 const routes: Routes = [
   {
     path: '',
-    component: SearchResultContainerComponent,
+    component: EntityListContainerComponent,
     children: [
       {
         path: '',

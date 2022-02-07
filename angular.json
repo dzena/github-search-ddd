@@ -11,7 +11,7 @@
     "search-feature-search": "libs/search/feature/search",
     "shared-directives": "libs/shared/directives",
     "shared-entity-list-domain": "libs/shared/entity-list/domain",
-    "shared-feature-search-result-container": "libs/shared/feature/search-result-container",
+    "shared-entity-list-feature-entity-list-container": "libs/shared/entity-list/feature/entity-list-container",
     "shared-http-interceptors": "libs/shared/http-interceptors",
     "shared-utils-base-state": "libs/shared/utils/base-state",
     "ui-kit-list": "libs/ui-kit/list",

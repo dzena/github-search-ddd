@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@github-search-ddd/material';
 import { UiKitToolbarModule } from '@github-search-ddd/ui-kit/toolbar';
 import { UiKitSearchFormModule } from '@github-search-ddd/ui-kit/search-form';
-import { SearchResultContainerComponent } from './search-result-container.component';
+import { EntityListContainerComponent } from './entity-list-container.component';
 
 @NgModule({
   imports: [
@@ -14,7 +14,7 @@ import { SearchResultContainerComponent } from './search-result-container.compon
     UiKitToolbarModule,
     UiKitSearchFormModule,
   ],
-  declarations: [SearchResultContainerComponent],
-  exports: [SearchResultContainerComponent],
+  declarations: [EntityListContainerComponent],
+  exports: [EntityListContainerComponent],
 })
-export class SharedSearchResultContainerModule {}
+export class SharedEntityListContainerModule {}

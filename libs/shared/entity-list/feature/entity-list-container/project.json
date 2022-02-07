@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/entity-list/feature/entity-list-container",
+  "sourceRoot": "libs/shared/entity-list/feature/entity-list-container/src",
+  "prefix": "github-search-ddd",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/shared/entity-list/feature/entity-list-container"],
+      "options": {
+        "project": "libs/shared/entity-list/feature/entity-list-container/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/entity-list/feature/entity-list-container/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/entity-list/feature/entity-list-container/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/entity-list/feature/entity-list-container"],
+      "options": {
+        "jestConfig": "libs/shared/entity-list/feature/entity-list-container/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/entity-list/feature/entity-list-container/src/**/*.ts",
+          "libs/shared/entity-list/feature/entity-list-container/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

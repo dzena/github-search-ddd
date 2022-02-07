@@ -2,12 +2,12 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'github-search-ddd-search-result-container',
-  templateUrl: './search-result-container.component.html',
-  styleUrls: ['./search-result-container.component.scss'],
+  selector: 'github-search-ddd-entity-list-container',
+  templateUrl: './entity-list-container.component.html',
+  styleUrls: ['./entity-list-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SearchResultContainerComponent {
+export class EntityListContainerComponent {
   constructor(private _router: Router, public route: ActivatedRoute) {}
 
   public search(q: string): void {
