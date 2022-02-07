@@ -11,7 +11,7 @@ export class SearchComponent {
   constructor(private _router: Router, private _route: ActivatedRoute) {}
 
   public search(q: string): void {
-    const queryParams = { q, per_page: '10' };
+    const queryParams = { q, per_page: '25' };
     this._router.navigate(['users'], {
       relativeTo: this._route,
       queryParams,
