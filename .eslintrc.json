@@ -64,6 +64,13 @@
                   "domain:repository",
                   "domain:shared"
                 ]
+              },
+              {
+                "sourceTag": "domain:entity-list",
+                "onlyDependOnLibsWithTags": [
+                  "domain:entity-list",
+                  "domain:shared"
+                ]
               }
             ]
           }

@@ -10,6 +10,7 @@
     "search-domain": "libs/search/domain",
     "search-feature-search": "libs/search/feature/search",
     "shared-directives": "libs/shared/directives",
+    "shared-entity-list-domain": "libs/shared/entity-list/domain",
     "shared-feature-search-result-container": "libs/shared/feature/search-result-container",
     "shared-http-interceptors": "libs/shared/http-interceptors",
     "shared-utils-base-state": "libs/shared/utils/base-state",

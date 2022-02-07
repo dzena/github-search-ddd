@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/entity-list/domain",
+  "sourceRoot": "libs/shared/entity-list/domain/src",
+  "prefix": "entity-list",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/shared/entity-list/domain"],
+      "options": {
+        "project": "libs/shared/entity-list/domain/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/entity-list/domain/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/entity-list/domain/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/entity-list/domain"],
+      "options": {
+        "jestConfig": "libs/shared/entity-list/domain/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/entity-list/domain/src/**/*.ts",
+          "libs/shared/entity-list/domain/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["domain:entity-list", "type:domain-logic"]
+}
