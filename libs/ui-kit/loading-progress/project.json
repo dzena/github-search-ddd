@@ -24,7 +24,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/ui-kit/loading-progress"],
       "options": {
-        "jestConfig": "libs/ui-kit/loading-progress/jest.config.js",
+        "jestConfig": "libs/ui-kit/loading-progress/jest.config.ts",
         "passWithNoTests": true
       }
     },

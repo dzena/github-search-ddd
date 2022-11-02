@@ -24,7 +24,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/ui-kit/list-filter"],
       "options": {
-        "jestConfig": "libs/ui-kit/list-filter/jest.config.js",
+        "jestConfig": "libs/ui-kit/list-filter/jest.config.ts",
         "passWithNoTests": true
       }
     },

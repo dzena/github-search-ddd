@@ -24,7 +24,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/user/feature/user-list"],
       "options": {
-        "jestConfig": "libs/user/feature/user-list/jest.config.js",
+        "jestConfig": "libs/user/feature/user-list/jest.config.ts",
         "passWithNoTests": true
       }
     },
