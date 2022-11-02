@@ -14,8 +14,6 @@
     "shared-entity-list-feature-entity-list-container": "libs/shared/entity-list/feature/entity-list-container",
     "shared-http-interceptors": "libs/shared/http-interceptors",
     "shared-utils-base-state": "libs/shared/utils/base-state",
-    "topics-domain": "libs/topics/domain",
-    "topics-feature-feature-topics-list": "libs/topics/feature/feature-topics-list",
     "ui-kit-list": "libs/ui-kit/list",
     "ui-kit-list-filter": "libs/ui-kit/list-filter",
     "ui-kit-loading-progress": "libs/ui-kit/loading-progress",
