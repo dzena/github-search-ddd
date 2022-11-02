@@ -1,6 +1,6 @@
 {
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "root": "libs/repository/utils/directives",
   "sourceRoot": "libs/repository/utils/directives/src",
   "prefix": "directives",
   "targets": {
