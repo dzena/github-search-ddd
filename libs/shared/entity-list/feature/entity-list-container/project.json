@@ -6,7 +6,9 @@
   "targets": {
     "build": {
       "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/shared/entity-list/feature/entity-list-container"],
+      "outputs": [
+        "{workspaceRoot}/dist/libs/shared/entity-list/feature/entity-list-container"
+      ],
       "options": {
         "project": "libs/shared/entity-list/feature/entity-list-container/ng-package.json"
       },
@@ -23,7 +25,7 @@
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": [
-        "coverage/libs/shared/entity-list/feature/entity-list-container"
+        "{workspaceRoot}/coverage/libs/shared/entity-list/feature/entity-list-container"
       ],
       "options": {
         "jestConfig": "libs/shared/entity-list/feature/entity-list-container/jest.config.ts",

@@ -6,7 +6,7 @@
   "targets": {
     "build": {
       "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/shared/utils/base-state"],
+      "outputs": ["{workspaceRoot}/dist/libs/shared/utils/base-state"],
       "options": {
         "project": "libs/shared/utils/base-state/ng-package.json"
       },
@@ -22,7 +22,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/shared/utils/base-state"],
+      "outputs": ["{workspaceRoot}/coverage/libs/shared/utils/base-state"],
       "options": {
         "jestConfig": "libs/shared/utils/base-state/jest.config.ts",
         "passWithNoTests": true

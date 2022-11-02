@@ -6,7 +6,7 @@
   "targets": {
     "build": {
       "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/search/feature/search"],
+      "outputs": ["{workspaceRoot}/dist/libs/search/feature/search"],
       "options": {
         "project": "libs/search/feature/search/ng-package.json"
       },
@@ -22,7 +22,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/search/feature/search"],
+      "outputs": ["{workspaceRoot}/coverage/libs/search/feature/search"],
       "options": {
         "jestConfig": "libs/search/feature/search/jest.config.ts",
         "passWithNoTests": true

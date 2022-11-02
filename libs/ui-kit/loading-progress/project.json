@@ -6,7 +6,7 @@
   "targets": {
     "build": {
       "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/ui-kit/loading-progress"],
+      "outputs": ["{workspaceRoot}/dist/libs/ui-kit/loading-progress"],
       "options": {
         "project": "libs/ui-kit/loading-progress/ng-package.json"
       },
@@ -22,7 +22,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ui-kit/loading-progress"],
+      "outputs": ["{workspaceRoot}/coverage/libs/ui-kit/loading-progress"],
       "options": {
         "jestConfig": "libs/ui-kit/loading-progress/jest.config.ts",
         "passWithNoTests": true

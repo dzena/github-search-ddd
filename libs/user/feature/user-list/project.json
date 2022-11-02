@@ -6,7 +6,7 @@
   "targets": {
     "build": {
       "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/user/feature/user-list"],
+      "outputs": ["{workspaceRoot}/dist/libs/user/feature/user-list"],
       "options": {
         "project": "libs/user/feature/user-list/ng-package.json"
       },
@@ -22,7 +22,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/user/feature/user-list"],
+      "outputs": ["{workspaceRoot}/coverage/libs/user/feature/user-list"],
       "options": {
         "jestConfig": "libs/user/feature/user-list/jest.config.ts",
         "passWithNoTests": true
