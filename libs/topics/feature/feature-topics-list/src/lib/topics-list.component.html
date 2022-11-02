@@ -1,0 +1,9 @@
+<h1>topics-topics-list</h1>
+
+<table class="table">
+  <tr *ngFor="let topic of topicList$ | async">
+    <td>{{ topic.id }}</td>
+    <td>{{ topic.name }}</td>
+    <td>{{ topic.description }}</td>
+  </tr>
+</table>
