@@ -27,6 +27,7 @@ export class RepositoryListFacade extends EntityListFacade<IRepositoryListEntity
     private _repositoryDataService: RepositoryDataService
   ) {
     super(_route, _repositoryState, _repositoryDataService);
+    console.warn("LOG");
   }
 
   public loadRepositories(): void {

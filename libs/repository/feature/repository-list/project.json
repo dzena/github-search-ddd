@@ -1,4 +1,5 @@
 {
+  "name": "repository-feature-repository-list",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/repository/feature/repository-list/src",
