@@ -71,10 +71,6 @@
                   "domain:entity-list",
                   "domain:shared"
                 ]
-              },
-              {
-                "sourceTag": "domain:topics",
-                "onlyDependOnLibsWithTags": ["domain:topics", "domain:shared"]
               }
             ]
           }

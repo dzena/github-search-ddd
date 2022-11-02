@@ -44,10 +44,6 @@
       "@github-search-ddd/shared/utils/base-state": [
         "libs/shared/utils/base-state/src/index.ts"
       ],
-      "@github-search-ddd/topics/domain": ["libs/topics/domain/src/index.ts"],
-      "@github-search-ddd/topics/feature/feature-topics-list": [
-        "libs/topics/feature/feature-topics-list/src/index.ts"
-      ],
       "@github-search-ddd/ui-kit/list": ["libs/ui-kit/list/src/index.ts"],
       "@github-search-ddd/ui-kit/list-filter": [
         "libs/ui-kit/list-filter/src/index.ts"
