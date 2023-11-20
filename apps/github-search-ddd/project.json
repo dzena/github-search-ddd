@@ -91,6 +91,13 @@
       "options": {
         "jestConfig": "apps/github-search-ddd/jest.config.ts"
       }
+    },
+    "e2e": {
+      "executor": "@nx/playwright:playwright",
+      "outputs": ["{workspaceRoot}/dist/.playwright/apps/github-search-ddd"],
+      "options": {
+        "config": "apps/github-search-ddd/playwright.config.ts"
+      }
     }
   },
   "tags": []
