@@ -22,9 +22,11 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/shared/entity-list/feature/entity-list-container"],
+      "outputs": [
+        "coverage/libs/shared/entity-list/feature/entity-list-container"
+      ],
       "options": {
-        "jestConfig": "libs/shared/entity-list/feature/entity-list-container/jest.config.js",
+        "jestConfig": "libs/shared/entity-list/feature/entity-list-container/jest.config.ts",
         "passWithNoTests": true
       }
     },

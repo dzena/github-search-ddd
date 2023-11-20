@@ -24,7 +24,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/shared/entity-list/domain"],
       "options": {
-        "jestConfig": "libs/shared/entity-list/domain/jest.config.js",
+        "jestConfig": "libs/shared/entity-list/domain/jest.config.ts",
         "passWithNoTests": true
       }
     },
