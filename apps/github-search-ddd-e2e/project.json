@@ -7,8 +7,9 @@
     "e2e": {
       "executor": "@nx/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/github-search-ddd-e2e/cypress.json",
-        "devServerTarget": "github-search-ddd:serve:development"
+        "cypressConfig": "apps/github-search-ddd-e2e/cypress.config.ts",
+        "devServerTarget": "github-search-ddd:serve:development",
+        "testingType": "e2e"
       },
       "configurations": {
         "production": {
