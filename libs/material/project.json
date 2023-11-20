@@ -1,14 +1,16 @@
 {
+  "name": "material",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "root": "libs/material",
   "sourceRoot": "libs/material/src",
   "prefix": "github-search-ddd",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/material"],
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/libs/material"],
       "options": {
-        "project": "libs/material/ng-package.json"
+        "project": "libs/material/ng-package.json",
+        "updateBuildableProjectDepsInPackageJson": true
       },
       "configurations": {
         "production": {
@@ -21,15 +23,14 @@
       "defaultConfiguration": "production"
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/material"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/material"],
       "options": {
-        "jestConfig": "libs/material/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/material/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "options": {
         "lintFilePatterns": [
           "libs/material/src/**/*.ts",

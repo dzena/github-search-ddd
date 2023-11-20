@@ -5,13 +5,13 @@
       filter
     ></github-search-ddd-list-filter>
     <mat-list-item *ngFor="let user of users.list" class="list-item">
-      <img matListAvatar [src]="user.avatar_url" alt="avatar" />
-      <h3 matLine class="list-item-title">
+      <img matListItemAvatar [src]="user.avatar_url" alt="avatar" />
+      <h3 matListItemTitle class="list-item-title">
         <a [href]="user.html_url" target="_blank" rel="noopener">
           {{ user.login }}
         </a>
       </h3>
-      <button mat-icon-button (click)="readMore(user.login)">
+      <button matListItemMeta mat-icon-button (click)="readMore(user.login)">
         <mat-icon>read_more</mat-icon>
       </button>
     </mat-list-item>

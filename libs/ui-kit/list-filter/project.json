@@ -1,14 +1,16 @@
 {
+  "name": "ui-kit-list-filter",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "root": "libs/ui-kit/list-filter",
   "sourceRoot": "libs/ui-kit/list-filter/src",
   "prefix": "github-search-ddd",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/ui-kit/list-filter"],
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/libs/ui-kit/list-filter"],
       "options": {
-        "project": "libs/ui-kit/list-filter/ng-package.json"
+        "project": "libs/ui-kit/list-filter/ng-package.json",
+        "updateBuildableProjectDepsInPackageJson": true
       },
       "configurations": {
         "production": {
@@ -21,15 +23,14 @@
       "defaultConfiguration": "production"
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ui-kit/list-filter"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/ui-kit/list-filter"],
       "options": {
-        "jestConfig": "libs/ui-kit/list-filter/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/ui-kit/list-filter/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "options": {
         "lintFilePatterns": [
           "libs/ui-kit/list-filter/src/**/*.ts",

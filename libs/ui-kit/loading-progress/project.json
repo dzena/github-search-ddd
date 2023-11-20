@@ -1,14 +1,16 @@
 {
+  "name": "ui-kit-loading-progress",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "root": "libs/ui-kit/loading-progress",
   "sourceRoot": "libs/ui-kit/loading-progress/src",
   "prefix": "github-search-ddd",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/ui-kit/loading-progress"],
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/libs/ui-kit/loading-progress"],
       "options": {
-        "project": "libs/ui-kit/loading-progress/ng-package.json"
+        "project": "libs/ui-kit/loading-progress/ng-package.json",
+        "updateBuildableProjectDepsInPackageJson": true
       },
       "configurations": {
         "production": {
@@ -21,15 +23,14 @@
       "defaultConfiguration": "production"
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ui-kit/loading-progress"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/ui-kit/loading-progress"],
       "options": {
-        "jestConfig": "libs/ui-kit/loading-progress/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/ui-kit/loading-progress/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "options": {
         "lintFilePatterns": [
           "libs/ui-kit/loading-progress/src/**/*.ts",

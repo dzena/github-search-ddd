@@ -1,13 +1,15 @@
 {
-  "root": "apps/github-search-ddd-e2e",
+  "name": "github-search-ddd-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/github-search-ddd-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
-      "executor": "@nrwl/cypress:cypress",
+      "executor": "@nx/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/github-search-ddd-e2e/cypress.json",
-        "devServerTarget": "github-search-ddd:serve:development"
+        "cypressConfig": "apps/github-search-ddd-e2e/cypress.config.ts",
+        "devServerTarget": "github-search-ddd:serve:development",
+        "testingType": "e2e"
       },
       "configurations": {
         "production": {
@@ -16,19 +18,13 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "apps/github-search-ddd-e2e/**/*.{js,ts}"
-        ]
+        "lintFilePatterns": ["apps/github-search-ddd-e2e/**/*.{js,ts}"]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": [
-    "github-search-ddd"
-  ]
+  "implicitDependencies": ["github-search-ddd"]
 }

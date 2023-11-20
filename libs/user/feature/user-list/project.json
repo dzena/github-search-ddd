@@ -1,14 +1,16 @@
 {
+  "name": "user-feature-user-list",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "root": "libs/user/feature/user-list",
   "sourceRoot": "libs/user/feature/user-list/src",
   "prefix": "user",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/user/feature/user-list"],
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/libs/user/feature/user-list"],
       "options": {
-        "project": "libs/user/feature/user-list/ng-package.json"
+        "project": "libs/user/feature/user-list/ng-package.json",
+        "updateBuildableProjectDepsInPackageJson": true
       },
       "configurations": {
         "production": {
@@ -21,15 +23,14 @@
       "defaultConfiguration": "production"
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/user/feature/user-list"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/user/feature/user-list"],
       "options": {
-        "jestConfig": "libs/user/feature/user-list/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/user/feature/user-list/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "options": {
         "lintFilePatterns": [
           "libs/user/feature/user-list/src/**/*.ts",

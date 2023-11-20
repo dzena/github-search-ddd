@@ -1,14 +1,16 @@
 {
+  "name": "search-feature-search",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "root": "libs/search/feature/search",
   "sourceRoot": "libs/search/feature/search/src",
   "prefix": "search",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/search/feature/search"],
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/libs/search/feature/search"],
       "options": {
-        "project": "libs/search/feature/search/ng-package.json"
+        "project": "libs/search/feature/search/ng-package.json",
+        "updateBuildableProjectDepsInPackageJson": true
       },
       "configurations": {
         "production": {
@@ -21,15 +23,14 @@
       "defaultConfiguration": "production"
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/search/feature/search"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/search/feature/search"],
       "options": {
-        "jestConfig": "libs/search/feature/search/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/search/feature/search/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "options": {
         "lintFilePatterns": [
           "libs/search/feature/search/src/**/*.ts",

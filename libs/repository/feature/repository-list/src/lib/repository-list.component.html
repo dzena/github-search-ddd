@@ -8,15 +8,15 @@
       *ngFor="let repository of repositories.list"
       class="list-item"
     >
-      <h3 matLine class="list-item-title">
+      <h3 matListItemTitle class="list-item-title">
         <a [href]="repository.html_url" target="_blank" rel="noopener">
           {{ repository.full_name }}
         </a>
       </h3>
-      <p matLine>
+      <p matListItemLine>
         <span>{{ repository.description }}</span>
       </p>
-      <p matLine>
+      <p matListItemLine>
         <span
           *ngFor="let tag of repository | repositoryTags"
           [title]="tag.title"

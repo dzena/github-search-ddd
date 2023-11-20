@@ -1,14 +1,18 @@
 {
+  "name": "shared-entity-list-feature-entity-list-container",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "root": "libs/shared/entity-list/feature/entity-list-container",
   "sourceRoot": "libs/shared/entity-list/feature/entity-list-container/src",
   "prefix": "github-search-ddd",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/shared/entity-list/feature/entity-list-container"],
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": [
+        "{workspaceRoot}/dist/libs/shared/entity-list/feature/entity-list-container"
+      ],
       "options": {
-        "project": "libs/shared/entity-list/feature/entity-list-container/ng-package.json"
+        "project": "libs/shared/entity-list/feature/entity-list-container/ng-package.json",
+        "updateBuildableProjectDepsInPackageJson": true
       },
       "configurations": {
         "production": {
@@ -21,15 +25,16 @@
       "defaultConfiguration": "production"
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/shared/entity-list/feature/entity-list-container"],
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/shared/entity-list/feature/entity-list-container"
+      ],
       "options": {
-        "jestConfig": "libs/shared/entity-list/feature/entity-list-container/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/shared/entity-list/feature/entity-list-container/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "options": {
         "lintFilePatterns": [
           "libs/shared/entity-list/feature/entity-list-container/src/**/*.ts",

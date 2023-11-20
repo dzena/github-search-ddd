@@ -1,14 +1,16 @@
 {
+  "name": "ui-kit-list",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "root": "libs/ui-kit/list",
   "sourceRoot": "libs/ui-kit/list/src",
   "prefix": "github-search-ddd",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/ui-kit/list"],
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/libs/ui-kit/list"],
       "options": {
-        "project": "libs/ui-kit/list/ng-package.json"
+        "project": "libs/ui-kit/list/ng-package.json",
+        "updateBuildableProjectDepsInPackageJson": true
       },
       "configurations": {
         "production": {
@@ -21,15 +23,14 @@
       "defaultConfiguration": "production"
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ui-kit/list"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/ui-kit/list"],
       "options": {
-        "jestConfig": "libs/ui-kit/list/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/ui-kit/list/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "options": {
         "lintFilePatterns": [
           "libs/ui-kit/list/src/**/*.ts",

@@ -1,14 +1,18 @@
 {
+  "name": "repository-feature-repository-list",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "root": "libs/repository/feature/repository-list",
   "sourceRoot": "libs/repository/feature/repository-list/src",
   "prefix": "repository",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/repository/feature/repository-list"],
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": [
+        "{workspaceRoot}/dist/libs/repository/feature/repository-list"
+      ],
       "options": {
-        "project": "libs/repository/feature/repository-list/ng-package.json"
+        "project": "libs/repository/feature/repository-list/ng-package.json",
+        "updateBuildableProjectDepsInPackageJson": true
       },
       "configurations": {
         "production": {
@@ -21,15 +25,16 @@
       "defaultConfiguration": "production"
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/repository/feature/repository-list"],
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/repository/feature/repository-list"
+      ],
       "options": {
-        "jestConfig": "libs/repository/feature/repository-list/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/repository/feature/repository-list/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "options": {
         "lintFilePatterns": [
           "libs/repository/feature/repository-list/src/**/*.ts",

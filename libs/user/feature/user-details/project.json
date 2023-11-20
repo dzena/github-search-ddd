@@ -1,14 +1,16 @@
 {
+  "name": "user-feature-user-details",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "root": "libs/user/feature/user-details",
   "sourceRoot": "libs/user/feature/user-details/src",
   "prefix": "user",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/user/feature/user-details"],
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/libs/user/feature/user-details"],
       "options": {
-        "project": "libs/user/feature/user-details/ng-package.json"
+        "project": "libs/user/feature/user-details/ng-package.json",
+        "updateBuildableProjectDepsInPackageJson": true
       },
       "configurations": {
         "production": {
@@ -21,15 +23,14 @@
       "defaultConfiguration": "production"
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/user/feature/user-details"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/user/feature/user-details"],
       "options": {
-        "jestConfig": "libs/user/feature/user-details/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/user/feature/user-details/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "options": {
         "lintFilePatterns": [
           "libs/user/feature/user-details/src/**/*.ts",
