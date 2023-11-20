@@ -6,12 +6,13 @@
   "prefix": "github-search-ddd",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:ng-packagr-lite",
+      "executor": "@nx/angular:ng-packagr-lite",
       "outputs": [
         "{workspaceRoot}/dist/libs/shared/entity-list/feature/entity-list-container"
       ],
       "options": {
-        "project": "libs/shared/entity-list/feature/entity-list-container/ng-package.json"
+        "project": "libs/shared/entity-list/feature/entity-list-container/ng-package.json",
+        "updateBuildableProjectDepsInPackageJson": true
       },
       "configurations": {
         "production": {
@@ -24,7 +25,7 @@
       "defaultConfiguration": "production"
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": [
         "{workspaceRoot}/coverage/libs/shared/entity-list/feature/entity-list-container"
       ],
@@ -34,7 +35,7 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": [
           "libs/shared/entity-list/feature/entity-list-container/src/**/*.ts",

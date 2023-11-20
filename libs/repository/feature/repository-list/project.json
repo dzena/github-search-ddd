@@ -6,12 +6,13 @@
   "prefix": "repository",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:ng-packagr-lite",
+      "executor": "@nx/angular:ng-packagr-lite",
       "outputs": [
         "{workspaceRoot}/dist/libs/repository/feature/repository-list"
       ],
       "options": {
-        "project": "libs/repository/feature/repository-list/ng-package.json"
+        "project": "libs/repository/feature/repository-list/ng-package.json",
+        "updateBuildableProjectDepsInPackageJson": true
       },
       "configurations": {
         "production": {
@@ -24,7 +25,7 @@
       "defaultConfiguration": "production"
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": [
         "{workspaceRoot}/coverage/libs/repository/feature/repository-list"
       ],
@@ -34,7 +35,7 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": [
           "libs/repository/feature/repository-list/src/**/*.ts",

@@ -77,7 +77,7 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": [
           "apps/github-search-ddd/src/**/*.ts",
@@ -86,7 +86,7 @@
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/github-search-ddd"],
       "options": {
         "jestConfig": "apps/github-search-ddd/jest.config.ts",
