@@ -26,12 +26,11 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/user/domain"],
       "options": {
-        "jestConfig": "libs/user/domain/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/user/domain/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "options": {
         "lintFilePatterns": [
           "libs/user/domain/src/**/*.ts",

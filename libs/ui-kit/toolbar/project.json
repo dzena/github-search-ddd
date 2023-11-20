@@ -26,12 +26,11 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ui-kit/toolbar"],
       "options": {
-        "jestConfig": "libs/ui-kit/toolbar/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/ui-kit/toolbar/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "options": {
         "lintFilePatterns": [
           "libs/ui-kit/toolbar/src/**/*.ts",

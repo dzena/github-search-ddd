@@ -26,12 +26,11 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/shared/http-interceptors"],
       "options": {
-        "jestConfig": "libs/shared/http-interceptors/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/shared/http-interceptors/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "options": {
         "lintFilePatterns": [
           "libs/shared/http-interceptors/src/**/*.ts",

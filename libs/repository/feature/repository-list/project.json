@@ -30,12 +30,11 @@
         "{workspaceRoot}/coverage/libs/repository/feature/repository-list"
       ],
       "options": {
-        "jestConfig": "libs/repository/feature/repository-list/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/repository/feature/repository-list/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "options": {
         "lintFilePatterns": [
           "libs/repository/feature/repository-list/src/**/*.ts",

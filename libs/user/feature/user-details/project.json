@@ -26,12 +26,11 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/user/feature/user-details"],
       "options": {
-        "jestConfig": "libs/user/feature/user-details/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/user/feature/user-details/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "options": {
         "lintFilePatterns": [
           "libs/user/feature/user-details/src/**/*.ts",
