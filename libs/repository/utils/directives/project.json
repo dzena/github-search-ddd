@@ -1,4 +1,5 @@
 {
+  "name": "repository-utils-directives",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/repository/utils/directives/src",

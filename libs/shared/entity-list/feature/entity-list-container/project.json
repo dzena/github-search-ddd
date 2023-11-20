@@ -1,4 +1,5 @@
 {
+  "name": "shared-entity-list-feature-entity-list-container",
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/shared/entity-list/feature/entity-list-container/src",

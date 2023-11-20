@@ -1,4 +1,5 @@
 {
+  "name": "ui-kit-list-filter",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/ui-kit/list-filter/src",

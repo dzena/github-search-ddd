@@ -1,6 +1,6 @@
 import { AfterViewInit, Directive, Input, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MatPaginator, PageEvent } from '@angular/material/paginator';
+import { MatLegacyPaginator as MatPaginator, LegacyPageEvent as PageEvent } from '@angular/material/legacy-paginator';
 import { Subject, takeUntil } from 'rxjs';
 
 @Directive({
