@@ -6,7 +6,7 @@
   "targets": {
     "build": {
       "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/ui-kit/list-filter"],
+      "outputs": ["{workspaceRoot}/dist/libs/ui-kit/list-filter"],
       "options": {
         "project": "libs/ui-kit/list-filter/ng-package.json"
       },
@@ -22,7 +22,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ui-kit/list-filter"],
+      "outputs": ["{workspaceRoot}/coverage/libs/ui-kit/list-filter"],
       "options": {
         "jestConfig": "libs/ui-kit/list-filter/jest.config.ts",
         "passWithNoTests": true

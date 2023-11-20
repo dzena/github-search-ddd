@@ -6,7 +6,9 @@
   "targets": {
     "build": {
       "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/repository/feature/repository-list"],
+      "outputs": [
+        "{workspaceRoot}/dist/libs/repository/feature/repository-list"
+      ],
       "options": {
         "project": "libs/repository/feature/repository-list/ng-package.json"
       },
@@ -22,7 +24,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/repository/feature/repository-list"],
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/repository/feature/repository-list"
+      ],
       "options": {
         "jestConfig": "libs/repository/feature/repository-list/jest.config.ts",
         "passWithNoTests": true

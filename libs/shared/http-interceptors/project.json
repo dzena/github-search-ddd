@@ -6,7 +6,7 @@
   "targets": {
     "build": {
       "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/shared/http-interceptors"],
+      "outputs": ["{workspaceRoot}/dist/libs/shared/http-interceptors"],
       "options": {
         "project": "libs/shared/http-interceptors/ng-package.json"
       },
@@ -22,7 +22,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/shared/http-interceptors"],
+      "outputs": ["{workspaceRoot}/coverage/libs/shared/http-interceptors"],
       "options": {
         "jestConfig": "libs/shared/http-interceptors/jest.config.ts",
         "passWithNoTests": true

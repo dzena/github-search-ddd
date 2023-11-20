@@ -6,7 +6,7 @@
   "targets": {
     "build": {
       "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/shared/directives"],
+      "outputs": ["{workspaceRoot}/dist/libs/shared/directives"],
       "options": {
         "project": "libs/shared/directives/ng-package.json"
       },
@@ -22,7 +22,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/shared/directives"],
+      "outputs": ["{workspaceRoot}/coverage/libs/shared/directives"],
       "options": {
         "jestConfig": "libs/shared/directives/jest.config.ts",
         "passWithNoTests": true

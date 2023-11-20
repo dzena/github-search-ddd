@@ -6,7 +6,7 @@
   "targets": {
     "build": {
       "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/shared/entity-list/domain"],
+      "outputs": ["{workspaceRoot}/dist/libs/shared/entity-list/domain"],
       "options": {
         "project": "libs/shared/entity-list/domain/ng-package.json"
       },
@@ -22,7 +22,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/shared/entity-list/domain"],
+      "outputs": ["{workspaceRoot}/coverage/libs/shared/entity-list/domain"],
       "options": {
         "jestConfig": "libs/shared/entity-list/domain/jest.config.ts",
         "passWithNoTests": true
