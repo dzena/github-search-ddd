@@ -1,6 +1,6 @@
 {
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "root": "libs/search/feature/search",
   "sourceRoot": "libs/search/feature/search/src",
   "prefix": "search",
   "targets": {

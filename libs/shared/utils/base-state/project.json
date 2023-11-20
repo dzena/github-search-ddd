@@ -1,6 +1,6 @@
 {
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "root": "libs/shared/utils/base-state",
   "sourceRoot": "libs/shared/utils/base-state/src",
   "prefix": "github-search-ddd",
   "targets": {

@@ -1,6 +1,6 @@
 {
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "root": "libs/shared/entity-list/domain",
   "sourceRoot": "libs/shared/entity-list/domain/src",
   "prefix": "entity-list",
   "targets": {

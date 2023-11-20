@@ -1,6 +1,6 @@
 {
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "root": "libs/ui-kit/search-form",
   "sourceRoot": "libs/ui-kit/search-form/src",
   "prefix": "github-search-ddd",
   "targets": {
