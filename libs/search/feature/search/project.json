@@ -9,8 +9,7 @@
       "executor": "@nx/angular:ng-packagr-lite",
       "outputs": ["{workspaceRoot}/dist/libs/search/feature/search"],
       "options": {
-        "project": "libs/search/feature/search/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/search/feature/search/ng-package.json"
       },
       "configurations": {
         "production": {

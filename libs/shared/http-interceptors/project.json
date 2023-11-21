@@ -9,8 +9,7 @@
       "executor": "@nx/angular:ng-packagr-lite",
       "outputs": ["{workspaceRoot}/dist/libs/shared/http-interceptors"],
       "options": {
-        "project": "libs/shared/http-interceptors/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/shared/http-interceptors/ng-package.json"
       },
       "configurations": {
         "production": {

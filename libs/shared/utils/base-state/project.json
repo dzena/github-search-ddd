@@ -9,8 +9,7 @@
       "executor": "@nx/angular:ng-packagr-lite",
       "outputs": ["{workspaceRoot}/dist/libs/shared/utils/base-state"],
       "options": {
-        "project": "libs/shared/utils/base-state/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/shared/utils/base-state/ng-package.json"
       },
       "configurations": {
         "production": {

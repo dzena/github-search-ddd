@@ -9,8 +9,7 @@
       "executor": "@nx/angular:ng-packagr-lite",
       "outputs": ["{workspaceRoot}/dist/libs/shared/entity-list/domain"],
       "options": {
-        "project": "libs/shared/entity-list/domain/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/shared/entity-list/domain/ng-package.json"
       },
       "configurations": {
         "production": {
