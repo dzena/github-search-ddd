@@ -1,5 +1,5 @@
 ---
-id: main-readme-id
+itemId: main-readme-id
 itemAffects: md1-id
 itemUses: md1-id
 ---
