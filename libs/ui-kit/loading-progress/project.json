@@ -9,8 +9,7 @@
       "executor": "@nx/angular:ng-packagr-lite",
       "outputs": ["{workspaceRoot}/dist/libs/ui-kit/loading-progress"],
       "options": {
-        "project": "libs/ui-kit/loading-progress/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/ui-kit/loading-progress/ng-package.json"
       },
       "configurations": {
         "production": {

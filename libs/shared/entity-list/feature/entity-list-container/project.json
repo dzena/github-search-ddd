@@ -11,8 +11,7 @@
         "{workspaceRoot}/dist/libs/shared/entity-list/feature/entity-list-container"
       ],
       "options": {
-        "project": "libs/shared/entity-list/feature/entity-list-container/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/shared/entity-list/feature/entity-list-container/ng-package.json"
       },
       "configurations": {
         "production": {

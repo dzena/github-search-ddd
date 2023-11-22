@@ -9,8 +9,7 @@
       "executor": "@nx/angular:ng-packagr-lite",
       "outputs": ["{workspaceRoot}/dist/libs/user/feature/user-details"],
       "options": {
-        "project": "libs/user/feature/user-details/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/user/feature/user-details/ng-package.json"
       },
       "configurations": {
         "production": {

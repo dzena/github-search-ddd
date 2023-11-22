@@ -9,8 +9,7 @@
       "executor": "@nx/angular:ng-packagr-lite",
       "outputs": ["{workspaceRoot}/dist/libs/search/domain"],
       "options": {
-        "project": "libs/search/domain/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/search/domain/ng-package.json"
       },
       "configurations": {
         "production": {

@@ -11,8 +11,7 @@
         "{workspaceRoot}/dist/libs/repository/feature/repository-list"
       ],
       "options": {
-        "project": "libs/repository/feature/repository-list/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/repository/feature/repository-list/ng-package.json"
       },
       "configurations": {
         "production": {

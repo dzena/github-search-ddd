@@ -9,8 +9,7 @@
       "executor": "@nx/angular:ng-packagr-lite",
       "outputs": ["{workspaceRoot}/dist/libs/ui-kit/list-filter"],
       "options": {
-        "project": "libs/ui-kit/list-filter/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/ui-kit/list-filter/ng-package.json"
       },
       "configurations": {
         "production": {
